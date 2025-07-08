@@ -44,7 +44,6 @@ export default function HowItWorks() {
                 <div className="relative pl-6 mt-6">
                     <div className="absolute left-0 top-0 h-full w-0.5">
                         {Array.from({ length: steps.length * 8 }).map((_, i) => {
-                            const totalDots = steps.length * 6
                             const isActive = i < (active + 1) * 8
                             return (
                                 <div

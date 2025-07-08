@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
-import { useEffect, useState } from "react"
 import Image from "next/image"
 
 export default function HeroSection() { 
