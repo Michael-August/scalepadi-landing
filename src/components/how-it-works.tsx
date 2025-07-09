@@ -88,7 +88,7 @@ export default function HowItWorks() {
                 </div>
             </div>
 
-            <div className={`w-full md:w-1/2 relative rounded-tl-[8px] rounded-bl-[32px] rounded-tr-[8px] h-[610px] ${active === 0 ? 'bg-[#FCCE37]' : 'bg-[#1746A2]'}`}>
+            <div className={`w-full md:w-1/2 relative rounded-tl-[8px] rounded-bl-[32px] hidden lg:block rounded-tr-[8px] h-[610px] ${active === 0 ? 'bg-[#FCCE37]' : 'bg-[#1746A2]'}`}>
                 <div className="rounded-[8px] ml-10 mt-10 -mb-10 shadow-xl h-[610px]">
                     <AnimatePresence mode="wait">
                         <motion.video

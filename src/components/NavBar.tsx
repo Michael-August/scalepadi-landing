@@ -22,9 +22,9 @@ export default function Navbar() {
             </div>
 
             <div className="hidden lg:flex items-center space-x-8">
-                <ScrollLink smooth={true} duration={600} to="hero" className="text-gray-700 hover:text-[#1746A2] transition-colors">
+                <Link href="/" className="text-gray-700 hover:text-[#1746A2] transition-colors">
                     Home
-                </ScrollLink>
+                </Link>
                 <ScrollLink
                     to="how-it-works"
                     smooth={true}
@@ -43,8 +43,8 @@ export default function Navbar() {
                     </button>
                     {showDropdown && (
                         <div className="absolute top-full mt-2 w-40 bg-white border rounded-md shadow-lg z-50">
-                        <Link href="/academy" className="block px-4 py-2 text-left hover:bg-gray-100">Academy</Link>
-                        <Link href="/growth-hub" className="block px-4 py-2 text-left hover:bg-gray-100">Growth Hub</Link>
+                            <Link onClick={() => setShowDropdown(false)} href="/academy" className="block px-4 py-2 text-left hover:bg-gray-100">Academy</Link>
+                            <Link onClick={() => setShowDropdown(false)} href="/growth-hub" className="block px-4 py-2 text-left hover:bg-gray-100">Growth Hub</Link>
                         </div>
                     )}
                 </div>
@@ -96,7 +96,7 @@ export default function Navbar() {
                         </button>
                     </div>
                     <nav className="flex flex-col space-y-4">
-                        <Link href="#" className="text-gray-700 hover:text-[#1746A2]">Home</Link>
+                        <Link onClick={() => setIsOpen(false)} href="/" className="text-gray-700 hover:text-[#1746A2]">Home</Link>
                         <ScrollLink
                             to="how-it-works"
                             smooth={true}
@@ -116,8 +116,8 @@ export default function Navbar() {
                             </button>
                             {showDropdown && (
                                 <div className="absolute top-full mt-2 w-40 bg-white border rounded-md shadow-lg z-50">
-                                    <Link href="/academy" className="block px-4 rounded-md py-2 text-left hover:bg-[#F4F8FF]">Academy</Link>
-                                    <Link href="/growth-hub" className="block px-4 py-2 rounded-md text-left hover:bg-[#F4F8FF]">Growth Hub</Link>
+                                    <Link onClick={() => setIsOpen(false)} href="/academy" className="block px-4 rounded-md py-2 text-left hover:bg-[#F4F8FF]">Academy</Link>
+                                    <Link onClick={() => setIsOpen(false)} href="/growth-hub" className="block px-4 py-2 rounded-md text-left hover:bg-[#F4F8FF]">Growth Hub</Link>
                                 </div>
                             )}
                         </div>

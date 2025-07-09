@@ -6,7 +6,7 @@ import Image from "next/image"
 
 export default function HeroSection() { 
     return (
-        <div id="hero" className="bg-[url('/images/hero-bg.svg')] bg-cover bg-center lg:h-[895px] w-full flex flex-col items-center gap-4 lg:pt-20 pt-10 px-4 lg:px-0">
+        <div id="hero" className="bg-[url('/images/hero-bg.svg')] bg-cover bg-center bg-[#F8F8F8] lg:h-[895px] w-full flex flex-col items-center gap-4 lg:pt-20 pt-10 px-4 lg:px-0">
             <div className="top lg:w-[892px] items-center justify-center flex flex-col gap-4">
                 <div className="avatars flex lg:flex-row flex-col items-center gap-1">
                     <Image src={'/images/avatars.svg'} alt="Avatars" width={95} height={24} />
