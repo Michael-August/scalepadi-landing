@@ -1,6 +1,7 @@
 import { Academy } from "@/components/academy";
 import HeroSection from "@/components/hero-section";
 import HowItWorks from "@/components/how-it-works";
+import Testimonials from "@/components/testimonials";
 import { WhoWeServe } from "@/components/who-we-serve";
 import { WhyChoose } from "@/components/why-choose";
 
@@ -12,6 +13,7 @@ export default function Home() {
       <WhoWeServe />
       <WhyChoose />
       <Academy />
+      <Testimonials />
     </div>
   );
 }

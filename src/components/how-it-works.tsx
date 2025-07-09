@@ -38,7 +38,7 @@ export default function HowItWorks() {
     }, [])
 
     return (
-        <div className="bg-[url('/images/hero-bg.svg')] flex flex-col lg:flex-row items-center gap-4 mt-6 lg:py-12 py-6">
+        <div id="how-it-works" className="bg-[url('/images/hero-bg.svg')] flex flex-col lg:flex-row items-center gap-4 mt-6 lg:py-12 py-6">
             <div className="w-full md:w-1/2 pl-4 lg:pl-14 relative">
                 <span className="text-2xl lg:text-5xl font-bold">How ScalePadi Works</span>
                 <div className="relative pl-6 mt-6">

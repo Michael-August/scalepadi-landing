@@ -6,10 +6,12 @@ import { ChevronDown, Menu, X } from "lucide-react"
 import Image from "next/image"
 import { useState } from "react"
 import { motion } from "framer-motion"
+import { Link as ScrollLink } from "react-scroll"
 
 export default function Navbar() {
 
     const [isOpen, setIsOpen] = useState(false)
+    const [showDropdown, setShowDropdown] = useState(false)
 
     return (
         <nav className="w-full z-10 sticky top-0 bg-white border-b border-[#E5E8EB] px-4 py-3 lg:px-14 flex items-center justify-between">
@@ -20,15 +22,31 @@ export default function Navbar() {
             </div>
 
             <div className="hidden lg:flex items-center space-x-8">
-                <Link href="#" className="text-gray-700 hover:text-[#1746A2] transition-colors">
+                <ScrollLink smooth={true} duration={600} to="hero" className="text-gray-700 hover:text-[#1746A2] transition-colors">
                     Home
-                </Link>
-                <Link href="#" className="text-gray-700 hover:text-[#1746A2] transition-colors">
+                </ScrollLink>
+                <ScrollLink
+                    to="how-it-works"
+                    smooth={true}
+                    duration={600}
+                    className="cursor-pointer text-gray-700 hover:text-[#1746A2] transition-colors"
+                >
                     How It Works
-                </Link>
-                <div className="flex items-center space-x-1 text-gray-700 hover:text-[#1746A2] transition-colors cursor-pointer">
-                    <span>Resources</span>
-                    <ChevronDown className="w-4 h-4" />
+                </ScrollLink>
+                <div className="relative">
+                    <button
+                        onClick={() => setShowDropdown(!showDropdown)}
+                        className="flex items-center space-x-1 text-gray-700 hover:text-[#1746A2]"
+                    >
+                        <span>Resources</span>
+                        <ChevronDown className="w-4 h-4" />
+                    </button>
+                    {showDropdown && (
+                        <div className="absolute top-full mt-2 w-40 bg-white border rounded-md shadow-lg z-50">
+                        <Link href="/academy" className="block px-4 py-2 text-left hover:bg-gray-100">Academy</Link>
+                        <Link href="/growth-hub" className="block px-4 py-2 text-left hover:bg-gray-100">Growth Hub</Link>
+                        </div>
+                    )}
                 </div>
                 <Link href="#" className="text-gray-700 hover:text-[#1746A2] transition-colors">
                     Contact
@@ -79,10 +97,29 @@ export default function Navbar() {
                     </div>
                     <nav className="flex flex-col space-y-4">
                         <Link href="#" className="text-gray-700 hover:text-[#1746A2]">Home</Link>
-                        <Link href="#" className="text-gray-700 hover:text-[#1746A2]">How It Works</Link>
-                        <div className="flex items-center space-x-1 text-gray-700 hover:text-[#1746A2]">
-                            <span>Resources</span>
-                            <ChevronDown className="w-4 h-4" />
+                        <ScrollLink
+                            to="how-it-works"
+                            smooth={true}
+                            duration={600}
+                            className="cursor-pointer text-gray-700 hover:text-[#1746A2]"
+                            onClick={() => setIsOpen(false)}
+                        >
+                            How It Works
+                        </ScrollLink>
+                        <div className="relative">
+                            <button
+                                onClick={() => setShowDropdown(!showDropdown)}
+                                className="flex items-center space-x-1 text-gray-700 hover:text-[#1746A2]"
+                            >
+                                <span className="cursor-pointer ">Resources</span>
+                                <ChevronDown className="w-4 h-4" />
+                            </button>
+                            {showDropdown && (
+                                <div className="absolute top-full mt-2 w-40 bg-white border rounded-md shadow-lg z-50">
+                                    <Link href="/academy" className="block px-4 rounded-md py-2 text-left hover:bg-[#F4F8FF]">Academy</Link>
+                                    <Link href="/growth-hub" className="block px-4 py-2 rounded-md text-left hover:bg-[#F4F8FF]">Growth Hub</Link>
+                                </div>
+                            )}
                         </div>
                         <Link href="#" className="text-gray-700 hover:text-[#1746A2]">Contact</Link>
                         <Link href="#" className="text-gray-700 hover:text-[#1746A2]">For Experts</Link>

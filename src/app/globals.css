@@ -62,6 +62,15 @@
   }
 }
 
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 html, body {
   font-family: var(--font-primary);
   padding: 0;
