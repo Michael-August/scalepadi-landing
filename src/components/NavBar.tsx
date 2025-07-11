@@ -7,11 +7,13 @@ import Image from "next/image"
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Link as ScrollLink } from "react-scroll"
+import { useRouter } from "next/navigation"
 
 export default function Navbar() {
 
     const [isOpen, setIsOpen] = useState(false)
     const [showDropdown, setShowDropdown] = useState(false)
+    const router = useRouter()
 
     return (
         <nav className="w-full z-10 sticky top-0 bg-white border-b border-[#E5E8EB] px-4 py-3 lg:px-14 flex items-center justify-between">
@@ -56,6 +58,7 @@ export default function Navbar() {
                 </Link>
                 <div className="flex items-center space-x-4">
                     <Button
+                        onClick={() => router.push('/wait-list')}
                         variant="outline"
                         className="border-[#1746A2] text-[#1746A2] hover:bg-[#1746A2] hover:text-white bg-transparent"
                     >
@@ -68,6 +71,7 @@ export default function Navbar() {
             {/* Mobile nav */}
             <div className="flex lg:hidden items-center space-x-4">
                 <Button
+                    onClick={() => router.push('/wait-list')}
                     variant="outline"
                     className="border-[#1746A2] text-[#1746A2] hover:bg-[#1746A2] hover:text-white bg-transparent px-3"
                 >
