@@ -35,6 +35,9 @@ export default function Navbar() {
                 >
                     How It Works
                 </ScrollLink>
+                <Link href="/about" className="text-gray-700 hover:text-[#1746A2] transition-colors">
+                    About us
+                </Link>
                 <div className="relative">
                     <button
                         onClick={() => setShowDropdown(!showDropdown)}
@@ -50,7 +53,7 @@ export default function Navbar() {
                         </div>
                     )}
                 </div>
-                <Link href="#" className="text-gray-700 hover:text-[#1746A2] transition-colors">
+                <Link href="/contact" className="text-gray-700 hover:text-[#1746A2] transition-colors">
                     Contact
                 </Link>
                 <Link href="#" className="text-gray-700 hover:text-[#1746A2] transition-colors">

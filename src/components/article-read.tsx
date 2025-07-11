@@ -32,7 +32,7 @@ const ArticleRead = () => {
                         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-snug">
                             {title}
                         </h1>
-                        <p className="mt-2 text-sm md:text-base">{subtitle}</p>
+                        <p className="mt-2 text-sm md:text-base texet-[#E5E5E5]">{subtitle}</p>
                         <p className="text-sm mt-3 font-light">
                             By <span className="font-semibold">{author}</span>
                         </p>
