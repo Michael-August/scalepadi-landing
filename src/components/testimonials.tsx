@@ -90,11 +90,26 @@ const Testimonials = () => {
                         {testimonials.map((testimonial, index) => (
                             <div
                                 key={index}
-                                className={`p-8 rounded-2xl border border-[#D1DAEC] bg-white w-[363px] h-[300px] shrink-0 transition-all ${
+                                className={`p-8 rounded-2xl border flex flex-col gap-8 border-[#D1DAEC] bg-white w-[363px] h-[300px] shrink-0 transition-all ${
                                 index % 2 !== 0 ? 'mt-14' : 'mt-0'
                                 }`}
                             >
-                                    
+                                <span className="text-[#1A1A1A] font-medium text-base text-left">They thoroughly analyze our industry and target audience, allowing them to develop customized campaigns that effectively reach and engage our customers. </span>
+                                <div className="flex items-center gap-3.5">
+                                    <div className="w-[70px] h-[70px] flex items-center justify-center border-2 rounded-full border-[#D9CF42] overflow-hidden">
+                                        <Image
+                                            className="w-full h-full object-cover rounded-full"
+                                            src="/images/testimonial-pic1.svg"
+                                            alt="picture"
+                                            width={70}
+                                            height={70}
+                                        />
+                                    </div>
+                                    <div className="flex flex-col gap-1">
+                                        <span className="font-bold text-[20px] text-left">Michael Kaizer</span>
+                                        <span className="text-base font-medium text-[#878C91]">Co-hort 3 participant</span>
+                                    </div>
+                                </div>
                             </div>
                         ))}
                     </div>

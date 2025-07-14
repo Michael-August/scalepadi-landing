@@ -1,5 +1,8 @@
+"use client";
+
 import { ArrowRight } from "lucide-react"
 import { Button } from "./ui/button"
+import CountUp from "react-countup";
 
 const AboutHero = () => {
     return (
@@ -23,19 +26,36 @@ const AboutHero = () => {
                     </div>
                 </div>
                 <div className="w-full lg:w-[1070px] lg:h-[462px] px-4 lg:px-0 flex flex-col mt-10 lg:mt-32 gap-4 lg:gap-6">
-                    <span className="text-[#1A1A1A] font-semibold text-xl lg:text-4xl">Recorded Impacts and Counting</span>
+                    <span className="text-[#1A1A1A] font-semibold text-xl lg:text-4xl">
+                        Recorded Impacts and Counting
+                    </span>
+
                     <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
                         <div className="flex flex-col items-center justify-center">
-                            <span className="font-bold text-[#1A1A1A] lg:text-[85px] text-3xl">50,000+</span>
-                            <span className="text-[#878A93] text-center text-base lg:text-2xl leading-8">Active community members</span>
+                            <span className="font-bold text-[#1A1A1A] lg:text-[85px] text-3xl">
+                                <CountUp end={50000} duration={2.5} separator="," suffix="+" />
+                            </span>
+                            <span className="text-[#878A93] text-center text-base lg:text-2xl leading-8">
+                                Active community members
+                            </span>
                         </div>
+
                         <div className="flex flex-col items-center justify-center">
-                            <span className="font-bold text-[#1A1A1A] lg:text-[85px] text-3xl">6500+</span>
-                            <span className="text-[#878A93] text-base lg:text-2xl leading-8">Businesses Empowered</span>
+                            <span className="font-bold text-[#1A1A1A] lg:text-[85px] text-3xl">
+                                <CountUp end={6500} duration={2.5} separator="," suffix="+" />
+                            </span>
+                            <span className="text-[#878A93] text-base lg:text-2xl leading-8">
+                                Businesses Empowered
+                            </span>
                         </div>
+
                         <div className="flex flex-col items-center justify-center">
-                            <span className="font-bold text-[#1A1A1A] lg:text-[85px] text-3xl">65+</span>
-                            <span className="text-[#878A93] text-base lg:text-2xl leading-8">Active Professional Experts</span>
+                            <span className="font-bold text-[#1A1A1A] lg:text-[85px] text-3xl">
+                                <CountUp end={65} duration={2.5} separator="," suffix="+" />
+                            </span>
+                            <span className="text-[#878A93] text-base lg:text-2xl leading-8">
+                                Active Professional Experts
+                            </span>
                         </div>
                     </div>
                 </div>
