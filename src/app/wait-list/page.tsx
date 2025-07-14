@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 
 import { Label } from "@/components/ui/label";
@@ -5,8 +7,12 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useRouter } from "next/navigation";
 
 const WaitList = () => {
+
+    const router = useRouter()
+
     return (
         <div className="bg-[url('/images/hero-bg.svg')] bg-cover bg-center w-full flex flex-col items-center gap-4 lg:pt-20 pt-10 px-4 lg:px-0 pb-5">
             <div className="px-4 py-10 lg:py-20 lg:px-[119px] gap-10 lg:gap-20 flex flex-col lg:flex-row">
@@ -40,7 +46,7 @@ const WaitList = () => {
                             <Textarea className="bg-[#F6F6F7] border border-[#D1DAEC75] rounded-2xl px-2 py-7 shadow-none" placeholder="Enter your email" />
                         </div>
 
-                        <Button className="flex w-fit gap-2 text-white bg-[#1746A2]">Submit <ArrowRight /></Button>
+                        <Button onClick={() => router.push('/success')} type="button" className="flex w-fit gap-2 text-white bg-[#1746A2]">Submit <ArrowRight /></Button>
                     </form>
                 </div>
                 <div className="flex-1 flex flex-col gap-4 lg:gap-5">
