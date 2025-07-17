@@ -5,7 +5,7 @@ import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "ScalePadi",
-  description: "No 1 Business Padi for Scaling",
+  description: "No 1 Padi for Scaling any Business",
 };
 
 export default function RootLayout({
