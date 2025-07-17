@@ -3,8 +3,12 @@
 import { ArrowRight } from "lucide-react"
 import { Button } from "./ui/button"
 import CountUp from "react-countup";
+import { useRouter } from "next/navigation";
 
 const AboutHero = () => {
+
+    const router = useRouter()
+
     return (
         <div className="">
             <div className="bg-[url('/images/hero-bg.svg')] bg-cover bg-center lg:h-[909px] lg:w-[1440px] flex w-full flex-col items-center pt-8 lg:pt-16">
@@ -18,7 +22,7 @@ const AboutHero = () => {
                         </div>
 
                         <div className="flex items-start w-full">
-                            <Button className="flex font-semibold w-fit items-center gap-2 bg-[#FCCE37] text-black">
+                            <Button onClick={() => router.push('/wait-list')} className="flex font-semibold w-fit items-center gap-2 bg-[#FCCE37] text-black">
                                 Join our Waitlist
                                 <ArrowRight />
                             </Button>

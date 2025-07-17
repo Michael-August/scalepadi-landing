@@ -38,7 +38,7 @@ export default function Navbar() {
                 <Link href="/about" className="text-gray-700 hover:text-[#1746A2] transition-colors">
                     About us
                 </Link>
-                <div className="relative">
+                {/* <div className="relative">
                     <button
                         onClick={() => setShowDropdown(!showDropdown)}
                         className="flex items-center space-x-1 text-gray-700 hover:text-[#1746A2]"
@@ -52,7 +52,7 @@ export default function Navbar() {
                             <Link onClick={() => setShowDropdown(false)} href="/growth-hub" className="block px-4 py-2 text-left hover:bg-gray-100">Growth Hub</Link>
                         </div>
                     )}
-                </div>
+                </div> */}
                 <Link href="/contact" className="text-gray-700 hover:text-[#1746A2] transition-colors">
                     Contact
                 </Link>
@@ -113,7 +113,7 @@ export default function Navbar() {
                         >
                             How It Works
                         </ScrollLink>
-                        <div className="relative">
+                        {/* <div className="relative">
                             <button
                                 onClick={() => setShowDropdown(!showDropdown)}
                                 className="flex items-center space-x-1 text-gray-700 hover:text-[#1746A2]"
@@ -127,7 +127,7 @@ export default function Navbar() {
                                     <Link onClick={() => setIsOpen(false)} href="/growth-hub" className="block px-4 py-2 rounded-md text-left hover:bg-[#F4F8FF]">Growth Hub</Link>
                                 </div>
                             )}
-                        </div>
+                        </div> */}
                         <Link href="#" className="text-gray-700 hover:text-[#1746A2]">Contact</Link>
                         <Link href="#" className="text-gray-700 hover:text-[#1746A2]">For Experts</Link>
                     </nav>

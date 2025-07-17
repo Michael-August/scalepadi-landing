@@ -1,27 +1,9 @@
 "use client";
 
+import { faqs } from "@/lib/constants/faq";
 import { AnimatePresence, motion } from "framer-motion"
 import { Minus, Plus } from "lucide-react"
 import { useState } from "react"
-
-const faqs = [
-    {
-      question: "Who is the Academy for?",
-      answer: "The Academy is for anyone looking to upskill and grow their career."
-    },
-    {
-      question: "Is it free?",
-      answer: "Absolutely. Upgrade/downgrade anytime with prorated billing."
-    },
-    {
-      question: "Is the internship remote or physical?",
-      answer: "It is completely remote, accessible from anywhere."
-    },
-    {
-      question: "What happens after the internship?",
-      answer: "You can apply for roles, get recommendations or join advanced programs."
-    }
-]
 
 const FAQ = () => {
 
@@ -38,7 +20,7 @@ const FAQ = () => {
 
                 <div className="w-full flex flex-col items-center justify-center">
                     <div className="card w-full lg:w-[504px]">
-                    {faqs.map((faq, index) => {
+                    {faqs.slice(0, 5).map((faq, index) => {
                         const isOpen = activeIndex === index
                         return (
                             <div

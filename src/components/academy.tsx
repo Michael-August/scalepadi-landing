@@ -1,9 +1,15 @@
+"use client"
+
 import { ArrowRight, Clock } from "lucide-react"
 import Image from "next/image"
 import { Button } from "./ui/button"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 
-export const Academy = ({onlyCourses = false}: {onlyCourses?: boolean}) => {
+export const Academy = ({ onlyCourses = false }: { onlyCourses?: boolean }) => {
+
+    const router = useRouter();
+    
     return (
         <div className="lg:px-14 px-4 lg:py-12 py-6">
             {!onlyCourses && <span className="font-bold text-2xl lg:text-5xl">ScalePadi Academy</span>}
@@ -85,7 +91,7 @@ export const Academy = ({onlyCourses = false}: {onlyCourses?: boolean}) => {
                         <span className="font-bold text-white text-3xl lg:text-[64px]">What You Gain</span>
                         <span className="font-medium text-white text-sm">Get in-demand skills and experience</span>
                     </div>
-                    <Button className="bg-[#FCCE37] text-[#1A1A1A] flex text-base lg:w-[284px] gap-4">
+                    <Button onClick={() => router.push('/wait-list')} className="bg-[#FCCE37] text-[#1A1A1A] flex text-base lg:w-[284px] gap-4">
                         Apply for the Next Cohort
                         <ArrowRight />
                     </Button>

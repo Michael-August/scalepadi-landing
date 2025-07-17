@@ -4,6 +4,7 @@ import { Facebook, Twitter, Linkedin, Instagram, ArrowRight } from "lucide-react
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "./ui/button"
+import { useRouter } from "next/navigation"
 
 const navigation = [
   { title: "How ScalePadi works", href: "#" },
@@ -20,11 +21,14 @@ const licence = [
 ]
 
 export default function Footer() {
+
+    const router = useRouter()
+
     return (
         <footer className="w-full flex flex-col gap-10 bg-[#1746A2] text-white px-4 lg:px-14 py-12">
             <div className="scale bg-[#020609] rounded-[32px] w-full flex flex-wrap items-center justify-between px-8 py-4 gap-5 lg:px-16 lg:py-8 lg:mb-16">
                 <span className="font-semibold text-4xl lg:text-6xl leading-[130%] lg:w-[750px]">Looking to Scale your Business?</span>
-                <Button className="flex items-center gap-2 bg-[#1746A2] text-white">
+                <Button onClick={() => router.push('/wait-list')} className="flex items-center gap-2 bg-[#1746A2] text-white">
                     <span>Get Started Now</span>
                     <ArrowRight />
                 </Button>

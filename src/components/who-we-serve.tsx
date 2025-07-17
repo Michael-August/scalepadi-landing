@@ -3,8 +3,12 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export const WhoWeServe = () => {
+
+    const router = useRouter()
+
     return (
         <div className="bg-[url('/images/we-serve-bg.svg')] bg-cover bg-center lg:h-[799px] mt-20 flex flex-col items-center justify-center gap-8 text-white py-6 lg:py-0">
             <div className="top flex flex-col items-center justify-center w-full lg:w-[634px] gap-3.5 px-4 lg:px-0">
@@ -38,7 +42,7 @@ export const WhoWeServe = () => {
                     <span className="text-base text-center text-[#333333]">Discover and support high-potential businesses backed by data-driven growth plans.</span>
                 </div>
             </div>
-            <Button className="flex font-semibold items-center gap-2 bg-[#FCCE37] text-[#1A1A1A]">
+            <Button onClick={() => router.push('/wait-list')} className="flex font-semibold items-center gap-2 bg-[#FCCE37] text-[#1A1A1A]">
                 Start for Free
                 <ArrowRight />
             </Button>

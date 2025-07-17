@@ -3,8 +3,12 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 
 export default function HeroSection() { 
+
+    const router = useRouter()
+
     return (
         <div id="hero" className="bg-[url('/images/hero-bg.svg')] bg-cover bg-center bg-[#F8F8F8] lg:h-[895px] w-full flex flex-col items-center gap-4 lg:pt-20 pt-10 px-4 lg:px-0">
             <div className="top lg:w-[892px] items-center justify-center flex flex-col gap-4">
@@ -17,11 +21,11 @@ export default function HeroSection() {
                 </span>
                 <span className="text-sm text-center text-[#1A1A1A]">Identify challenges, get expert-backed strategies, and scale efficiently all on one platform.</span>
                 <div className="buttons flex items-center gap-3 justify-center mt-4">
-                    <Button className="flex font-semibold items-center gap-2 bg-[#1746A2] text-white">
+                    <Button onClick={() => router.push('/wait-list')} className="flex font-semibold items-center gap-2 bg-[#1746A2] text-white">
                         Join waitlist
                         <ArrowRight />
                     </Button>
-                    <Button className="flex items-center gap-2 bg-transparent text-[#1746A2] hover:bg-[#1746A2] hover:text-white border border-[#1746A2]">
+                    <Button onClick={() => router.push('/wait-list')} className="flex items-center gap-2 bg-transparent text-[#1746A2] hover:bg-[#1746A2] hover:text-white border border-[#1746A2]">
                         Explore ScalePadi
                         <ArrowRight />
                     </Button>

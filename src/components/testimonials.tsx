@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { ArrowLeft, ArrowRight} from "lucide-react";
 import { Button } from "./ui/button";
+import { useRouter } from "next/navigation";
 
 const testimonials = [
     {
@@ -56,6 +57,8 @@ const Testimonials = () => {
     //   setAnimationDirection("prev")
       setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
     }
+
+    const router = useRouter();
 
     return (
         <div className="w-full lg:py-20 py-6 bg-white text-center flex flex-col gap-5 mt-8">
@@ -126,7 +129,7 @@ const Testimonials = () => {
                         <Image src={'/images/logo3.svg'} alt="partner logo" width={108} height={33} />
                     </div>
                 </div>
-                <Button className="flex items-center gap-2 bg-[#1746A2] text-white">
+                <Button onClick={() => router.push('/wait-list')} className="flex items-center gap-2 bg-[#1746A2] text-white">
                     <span>Get Started Now</span>
                     <ArrowRight />
                 </Button>

@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const steps = [
     {
@@ -29,6 +30,8 @@ const steps = [
 export default function HowItWorks() { 
 
     const [active, setActive] = useState(0)
+
+    const router = useRouter();
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -81,7 +84,7 @@ export default function HowItWorks() {
                             <p className="text-sm text-gray-500 max-w-sm">{step.description}</p>
                         </div>
                     ))}
-                    <Button className="flex font-semibold items-center gap-2 bg-[#1746A2] text-white">
+                    <Button onClick={() => router.push('/wait-list')} className="flex font-semibold items-center gap-2 bg-[#1746A2] text-white">
                         Get Started for Free
                         <ArrowRight />
                     </Button>
