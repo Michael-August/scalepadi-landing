@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { ChevronDown, Menu, X } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import Image from "next/image"
 import { useState } from "react"
 import { motion } from "framer-motion"
@@ -12,7 +12,7 @@ import { useRouter } from "next/navigation"
 export default function Navbar() {
 
     const [isOpen, setIsOpen] = useState(false)
-    const [showDropdown, setShowDropdown] = useState(false)
+    // const [showDropdown, setShowDropdown] = useState(false)
     const router = useRouter()
 
     return (
