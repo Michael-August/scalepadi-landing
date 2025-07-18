@@ -8,40 +8,26 @@ import { useRouter } from "next/navigation";
 
 const testimonials = [
     {
-        name: "Michael Kaizer",
-        title: "CEO of Basecamp Corp",
-        image: "/avatars/avatar1.jpg",
+        name: "Oreofe Ojurereoluwa Daniel",
+        title: "Partnerships Lead Mytherapist.ng",
+        image: "",
         message:
-        "They thoroughly analyze our industry and target audience, allowing them to develop customized campaigns that effectively reach and engage our customers.",
+        "Working with Growthpadi has been a great experience. As a mental health organisation, Mytherapist.ng needed help improving how we handle business development, and they really came through. Their advice on how to improve our sales process from finding leads to closing deals made a big difference for us. The weekly check-ins were super helpful, and the feedback I received really helped us sharpen our approach and messaging. They were always professional, quick to respond, and also genuinely invested in our success (Anita's top notch check ins 🫶🏼) One thing I'd say is that we didn't fully utilise them to a large extent because they had so much to give but overall, the partnership has been really beneficial. I'm glad to have worked with them and definitely would recommend Growthpadi to any business looking for practical support.",
     },
     {
-        name: "Michael Kaizer",
-        title: "CEO of Basecamp Corp",
-        image: "/avatars/avatar2.jpg",
+        name: "Tamaraefieye Isaac",
+        title: "Founder Kartam Financial",
+        image: "",
         message:
-        "They thoroughly analyze our industry and target audience, allowing them to develop customized campaigns that effectively reach and engage our customers.",
+        "I am the founder of Kartam Financial, a company based in the United States. I was starting a new business and I did not know how to kick it off and very unmotivated, that when I found Growth Padi and my business journey had been great ever since. Growthpadi has helped me with the start of my new business by helping bring my ideas and vision to reality by helping me understand how to manage’ market and create a brand for my business. They have also help me understand my customers and ways I can reach them. Growth Padi do not just do the work themselves but involve you in all their processes, so you can be educated and become a better business owner. They also have helped me curate my brand identity, which I was struggling with. I will highly recommend Growth Padi to anyone struggling to start up their business or have an idea but don’t know what to do. The people at Growth Padi work hard and consistently to give you the best services. My business is off the ground and I have began to get clients for my business. I could not have done all this without Growth Padi.",
     },
     {
-        name: "Michael Kaizer",
-        title: "CEO of Basecamp Corp",
-        image: "/avatars/avatar3.jpg",
+        name: "Oreofe Ojurereoluwa Daniel",
+        title: "Partnerships Lead, Mytherapist.ng",
+        image: "",
         message:
-        "They thoroughly analyze our industry and target audience, allowing them to develop customized campaigns that effectively reach and engage our customers.",
-    },
-    {
-        name: "Michael Kaizer",
-        title: "CEO of Basecamp Corp",
-        image: "/avatars/avatar3.jpg",
-        message:
-          "They thoroughly analyze our industry and target audience, allowing them to develop customized campaigns that effectively reach and engage our customers.",
-    },
-    {
-        name: "Michael Kaizer",
-        title: "CEO of Basecamp Corp",
-        image: "/avatars/avatar3.jpg",
-        message:
-          "They thoroughly analyze our industry and target audience, allowing them to develop customized campaigns that effectively reach and engage our customers.",
-      },
+        "Working with Growthpadi has been a great experience. As a mental health organisation, Mytherapist.ng needed help improving how we handle business development, and they really came through. Their advice on how to improve our sales process from finding leads toclosing deals made a big difference for us.The weekly check-ins were super helpful, and the feedback I received really helped us sharpen our approach and messaging. They were always professional, quick to respond, and also genuinely invested in our success (Anita's top notch check ins) One thing I'd say is that we didn't fully utilise them to a large extent because they had so much to give but overall, the partnership has been really beneficial. I'm glad to have worked with them and definitely would recommend Growthpadi to any business looking for practical support.",
+    }
 ];
 
 const Testimonials = () => {
@@ -89,7 +75,7 @@ const Testimonials = () => {
                 </div>
 
                 <div className="cards w-full overflow-x-scroll hide-scrollbar pb-4">
-                    <div className="flex gap-7 items-start min-w-fit">
+                    <div className="flex gap-7 items-start justify-center min-w-fit">
                         {testimonials.map((testimonial, index) => (
                             <div
                                 key={index}
@@ -97,20 +83,23 @@ const Testimonials = () => {
                                 index % 2 !== 0 ? 'mt-14' : 'mt-0'
                                 }`}
                             >
-                                <span className="text-[#1A1A1A] font-medium text-base text-left">They thoroughly analyze our industry and target audience, allowing them to develop customized campaigns that effectively reach and engage our customers. </span>
+                                <span className="text-[#1A1A1A] font-medium text-base text-left text-ellipsis">
+                                    {testimonial.message.split(' ').slice(0, 21).join(' ')}
+                                    {testimonial.message.split(' ').length > 21 && '...'}
+                                </span>
                                 <div className="flex items-center gap-3.5">
-                                    <div className="w-[70px] h-[70px] flex items-center justify-center border-2 rounded-full border-[#D9CF42] overflow-hidden">
+                                    <div className="w-[70px] h-[70px] flex items-center justify-center rounded-full  overflow-hidden">
                                         <Image
                                             className="w-full h-full object-cover rounded-full"
-                                            src="/images/testimonial-pic1.svg"
+                                            src={testimonial.image || 'data:image/jpeg;base64,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'}
                                             alt="picture"
                                             width={70}
                                             height={70}
                                         />
                                     </div>
                                     <div className="flex flex-col gap-1">
-                                        <span className="font-bold text-[20px] text-left">Michael Kaizer</span>
-                                        <span className="text-base font-medium text-[#878C91]">Co-hort 3 participant</span>
+                                        <span className="font-bold text-[16px] text-left">{testimonial.name}</span>
+                                        <span className="text-base text-left font-medium text-[#878C91]">{testimonial.title}</span>
                                     </div>
                                 </div>
                             </div>
