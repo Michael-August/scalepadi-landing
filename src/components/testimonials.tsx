@@ -122,7 +122,7 @@ const Testimonials = () => {
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 px-4 lg:pl-14 mt-16 items-center">
                 <div className="pattners flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
                     <span className="text-[#010205] text-left w-[190px] font-semibold text-base">Trusted by the worlds biggest brands</span>
-                    <div className="flex flex-wrap gap-4 lg:gap-7">
+                    <div className="flex items-center justify-center flex-wrap gap-4 lg:gap-7">
                         <Image src={'/images/logo1.svg'} alt="partner logo" width={108} height={33} />
                         <Image src={'/images/logo2.svg'} alt="partner logo" width={108} height={33} />
                         <Image src={'/images/logo3.svg'} alt="partner logo" width={108} height={33} />

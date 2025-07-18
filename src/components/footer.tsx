@@ -11,7 +11,7 @@ const navigation = [
   { title: "Academy", href: "#" },
   { title: "Blog", href: "#" },
   { title: "About our Growth Hub", href: "#" },
-  { title: "Contact us", href: "#" },
+  { title: "Contact us", href: "/contact" },
 ]
 
 const licence = [
@@ -27,7 +27,7 @@ export default function Footer() {
     return (
         <footer className="w-full flex flex-col gap-10 bg-[#1746A2] text-white px-4 lg:px-14 py-12">
             <div className="scale bg-[#020609] rounded-[32px] w-full flex flex-wrap items-center justify-between px-8 py-4 gap-5 lg:px-16 lg:py-8 lg:mb-16">
-                <span className="font-semibold text-4xl lg:text-6xl leading-[130%] lg:w-[750px]">Looking to Scale your Business?</span>
+                <span className="font-semibold text-2xl lg:text-6xl leading-[130%] lg:w-[750px]">Looking to Scale your Business?</span>
                 <Button onClick={() => router.push('/wait-list')} className="flex items-center gap-2 bg-[#1746A2] text-white">
                     <span>Get Started Now</span>
                     <ArrowRight />
@@ -77,13 +77,13 @@ export default function Footer() {
 
                         {/* Licence */}
                         <div className="w-full flex flex-col items-center justify-center md:items-start md:justify-start">
-                            <h4 className="font-semibold text-lg mb-5 lg:mb-10">Licence</h4>
+                            <h4 className="font-semibold text-lg mb-5 lg:mb-10">License</h4>
                             <ul className="flex flex-col items-center justify-center md:items-start md:justify-start gap-3 md:gap-7">
                             {licence.map((item, index) => (
                                 <li key={index}>
-                                <Link href={item.href} className="text-blue-100 hover:text-white text-sm transition-colors">
-                                    {item.title}
-                                </Link>
+                                    <Link href={item.href} className="text-blue-100 hover:text-white text-sm transition-colors">
+                                        {item.title}
+                                    </Link>
                                 </li>
                             ))}
                             </ul>

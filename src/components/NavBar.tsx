@@ -7,13 +7,14 @@ import Image from "next/image"
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Link as ScrollLink } from "react-scroll"
-import { useRouter } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 
 export default function Navbar() {
 
     const [isOpen, setIsOpen] = useState(false)
     // const [showDropdown, setShowDropdown] = useState(false)
     const router = useRouter()
+    const pathname = usePathname();
 
     return (
         <nav className="w-full z-10 sticky top-0 bg-white border-b border-[#E5E8EB] px-4 py-3 lg:px-14 flex items-center justify-between">
@@ -27,14 +28,20 @@ export default function Navbar() {
                 <Link href="/" className="text-gray-700 hover:text-[#1746A2] transition-colors">
                     Home
                 </Link>
-                <ScrollLink
-                    to="how-it-works"
-                    smooth={true}
-                    duration={600}
-                    className="cursor-pointer text-gray-700 hover:text-[#1746A2] transition-colors"
-                >
-                    How It Works
-                </ScrollLink>
+                {pathname === "/" ? (
+                    <ScrollLink
+                        to="how-it-works"
+                        smooth={true}
+                        duration={600}
+                        className="cursor-pointer text-gray-700 hover:text-[#1746A2] transition-colors"
+                    >
+                        How It Works
+                    </ScrollLink>
+                    ) : (
+                    <Link href="/#how-it-works" className="cursor-pointer text-gray-700 hover:text-[#1746A2] transition-colors">
+                        How It Works
+                    </Link>
+                )}
                 <Link href="/about" className="text-gray-700 hover:text-[#1746A2] transition-colors">
                     About us
                 </Link>
@@ -104,15 +111,21 @@ export default function Navbar() {
                     </div>
                     <nav className="flex flex-col space-y-4">
                         <Link onClick={() => setIsOpen(false)} href="/" className="text-gray-700 hover:text-[#1746A2]">Home</Link>
-                        <ScrollLink
-                            to="how-it-works"
-                            smooth={true}
-                            duration={600}
-                            className="cursor-pointer text-gray-700 hover:text-[#1746A2]"
-                            onClick={() => setIsOpen(false)}
-                        >
-                            How It Works
-                        </ScrollLink>
+                        {pathname === "/" ? (
+                            <ScrollLink
+                                to="how-it-works"
+                                smooth={true}
+                                duration={600}
+                                className="cursor-pointer text-gray-700 hover:text-[#1746A2] transition-colors"
+                                onClick={() => setIsOpen(false)}
+                            >
+                                How It Works
+                            </ScrollLink>
+                            ) : (
+                            <Link onClick={() => setIsOpen(false)} href="/#how-it-works" className="cursor-pointer text-gray-700 hover:text-[#1746A2] transition-colors">
+                                How It Works
+                            </Link>
+                        )}
                         {/* <div className="relative">
                             <button
                                 onClick={() => setShowDropdown(!showDropdown)}
@@ -128,8 +141,8 @@ export default function Navbar() {
                                 </div>
                             )}
                         </div> */}
-                        <Link href="#" className="text-gray-700 hover:text-[#1746A2]">Contact</Link>
-                        <Link href="#" className="text-gray-700 hover:text-[#1746A2]">For Experts</Link>
+                        <Link onClick={() => setIsOpen(false)} href="/contact" className="text-gray-700 hover:text-[#1746A2]">Contact</Link>
+                        <Link onClick={() => setIsOpen(false)} href="#" className="text-gray-700 hover:text-[#1746A2]">For Experts</Link>
                     </nav>
                 </motion.div>
             )}

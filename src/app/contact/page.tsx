@@ -6,7 +6,7 @@ import { ArrowRight, Mail, Phone, Pin } from "lucide-react";
 
 const Contact = () => {
     return (
-        <div className="flex flex-col gap-4 lg:gap-8 px-60 py-8">
+        <div className="flex flex-col gap-4 lg:gap-8 px-4 lg:px-60 py-8">
             <div className="w-full lg:w-[534px]">
                 <span className="text-[#1A1A1A] text-2xl lg:text-5xl lg:leading-[69.19px] font-bold">Have <span className="text-[#1746A2]">Inquiries</span> about our Product ?</span>
             </div>
