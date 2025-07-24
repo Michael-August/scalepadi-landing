@@ -111,11 +111,29 @@ const Testimonials = () => {
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 px-4 lg:pl-14 mt-16 items-center">
                 <div className="pattners flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
                     <span className="text-[#010205] text-left w-[190px] font-semibold text-base">Trusted by the worlds biggest brands</span>
-                    <div className="flex items-center justify-center flex-wrap gap-4 lg:gap-7">
-                        <Image src={'/images/logo1.svg'} alt="partner logo" width={108} height={33} />
-                        <Image src={'/images/logo2.svg'} alt="partner logo" width={108} height={33} />
-                        <Image src={'/images/logo3.svg'} alt="partner logo" width={108} height={33} />
-                        <Image src={'/images/logo3.svg'} alt="partner logo" width={108} height={33} />
+                    <div className="w-full overflow-hidden">
+                        <div
+                            className="flex items-center justify-center gap-4 lg:gap-7 animate-scroll"
+                        >
+                            <Image src={'/images/logos/afrinolly.png'} alt="partner logo" width={108} height={33} />
+                            <Image src={'/images/logos/colad.png'} alt="partner logo" width={108} height={33} />
+                            <Image src={'/images/logos/onehealth.jfif'} alt="partner logo" width={108} height={33} />
+                            <Image src={'/images/logos/kartam.png'} alt="partner logo" width={108} height={33} />
+                            <Image src={'/images/logos/ibomsoups.png'} alt="partner logo" width={108} height={33} />
+                            <Image src={'/images/logos/Meekfi.svg'} alt="partner logo" width={108} height={33} />
+                            <Image src={'/images/logos/Mytherapist.png'} alt="partner logo" width={108} height={33} />
+                            <Image src={'/images/logos/retro.png'} alt="partner logo" width={108} height={33} />
+                            <Image src={'/images/logos/s&s.jpg'} alt="partner logo" width={108} height={33} />
+                            <Image src={'/images/logos/afrinolly.png'} alt="partner logo" width={108} height={33} />
+                            <Image src={'/images/logos/colad.png'} alt="partner logo" width={108} height={33} />
+                            <Image src={'/images/logos/onehealth.jfif'} alt="partner logo" width={108} height={33} />
+                            <Image src={'/images/logos/kartam.png'} alt="partner logo" width={108} height={33} />
+                            <Image src={'/images/logos/ibomsoups.png'} alt="partner logo" width={108} height={33} />
+                            <Image src={'/images/logos/Meekfi.svg'} alt="partner logo" width={108} height={33} />
+                            <Image src={'/images/logos/Mytherapist.png'} alt="partner logo" width={108} height={33} />
+                            <Image src={'/images/logos/retro.png'} alt="partner logo" width={108} height={33} />
+                            <Image src={'/images/logos/s&s.jpg'} alt="partner logo" width={108} height={33} />
+                        </div>
                     </div>
                 </div>
                 <Button onClick={() => router.push('/wait-list')} className="flex items-center gap-2 bg-[#1746A2] text-white">
@@ -126,6 +144,5 @@ const Testimonials = () => {
         </div>
     );
 }
-
 export default Testimonials
 

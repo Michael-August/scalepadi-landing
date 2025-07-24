@@ -75,3 +75,19 @@ html, body {
   font-family: var(--font-primary);
   padding: 0;
 }
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  display: inline-flex;
+  min-width: 200%;
+  animation: scroll-left 20s linear infinite;
+}
