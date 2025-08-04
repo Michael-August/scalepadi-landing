@@ -41,12 +41,12 @@ export const Academy = ({ onlyCourses = false }: { onlyCourses?: boolean }) => {
     },
   };
   const valueItems = [
-  "In-demand growth skills in sales, strategy, marketing",
-  "Work experience through structured internships",
-  "Mentorship from industry experts and life-long learning opportunities",
-  "Scale your career, increase revenue, connect with businesses in need of your skills",
-  "A community and network of like-minded growth experts",
-];
+    "In-demand growth skills in sales, strategy, marketing",
+    "Work experience through structured internships",
+    "Mentorship from industry experts and life-long learning opportunities",
+    "Scale your career, increase revenue, connect with businesses in need of your skills",
+    "A community and network of like-minded growth experts",
+  ];
   return (
     <MotionSection
       initial="hidden"
@@ -185,96 +185,98 @@ export const Academy = ({ onlyCourses = false }: { onlyCourses?: boolean }) => {
         </MotionSection>
       )}
 
-    <MotionSection
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: false, amount: 0.3 }}
-      variants={{
-        hidden: { opacity: 0, y: 50 },
-        show: {
-          opacity: 1,
-          y: 0,
-          transition: { delay: 0.4, duration: 0.6 },
-        },
-      }}
-      className="lg:mt-16 mt-8 mx-auto lg:w-[1070px] w-full lg:h-[461px] rounded-2xl bg-[#1A1A1A] px-4 lg:pl-20 py-4 lg:pt-0 flex items-center gap-8 flex-col lg:flex-row"
-    >
-      {/* Left Side */}
-      <div className="lg:w-[404px] flex flex-col gap-7">
-        <MotionText
-          variants={{
-            hidden: { opacity: 0, y: 40 },
-            show: {
-              opacity: 1,
-              y: 0,
-              transition: { delay: 0.5, duration: 0.6 },
-            },
-          }}
-          className="font-bold text-white text-3xl lg:text-[64px]"
-        >
-          What You Gain
-        </MotionText>
-
-        <MotionText
-          variants={{
-            hidden: { opacity: 0, y: 30 },
-            show: {
-              opacity: 1,
-              y: 0,
-              transition: { delay: 0.6, duration: 0.5 },
-            },
-          }}
-          className="font-medium text-white text-sm"
-        >
-          Get in-demand skills and experience
-        </MotionText>
-
-        <Button
-          onClick={() => router.push("/wait-list")}
-          className="bg-[#FCCE37] text-[#1A1A1A] flex text-base lg:w-[284px] gap-4"
-        >
-          Apply for the Next Cohort <ArrowRight />
-        </Button>
-      </div>
-
-      {/* Right Side */}
       <MotionSection
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.3 }}
         variants={{
-          hidden: { opacity: 0, scale: 0.95 },
+          hidden: { opacity: 0, y: 50 },
           show: {
             opacity: 1,
-            scale: 1,
-            transition: { delay: 0.7, duration: 0.6 },
+            y: 0,
+            transition: { delay: 0.4, duration: 0.6 },
           },
         }}
-        className="bg-white rounded-2xl lg:w-[569px] p-2 lg:p-6 lg:-mr-8"
+        className="lg:mt-16 mt-8 mx-auto lg:w-[1070px] w-full lg:h-[461px] rounded-2xl bg-[#1A1A1A] px-4 lg:pl-20 py-4 lg:pt-0 flex items-center gap-8 flex-col lg:flex-row"
       >
-        <div className="flex flex-col gap-[18px]">
-          {valueItems.map((text, i) => (
-            <MotionText
-              key={i}
-              variants={{
-                hidden: { opacity: 0, x: -20 },
-                show: {
-                  opacity: 1,
-                  x: 0,
-                  transition: { delay: 0.8 + i * 0.1 },
-                },
-              }}
-              className="flex gap-3"
-            >
-              <Image
-                src="/icons/check.svg"
-                alt="check-icon"
-                width={24}
-                height={24}
-              />
-              <span className="text-base font-normal lg:w-[382px]">{text}</span>
-            </MotionText>
-          ))}
+        {/* Left Side */}
+        <div className="lg:w-[404px] flex flex-col gap-7">
+          <MotionText
+            variants={{
+              hidden: { opacity: 0, y: 40 },
+              show: {
+                opacity: 1,
+                y: 0,
+                transition: { delay: 0.5, duration: 0.6 },
+              },
+            }}
+            className="font-bold text-white text-3xl lg:text-[64px]"
+          >
+            What You Gain
+          </MotionText>
+
+          <MotionText
+            variants={{
+              hidden: { opacity: 0, y: 30 },
+              show: {
+                opacity: 1,
+                y: 0,
+                transition: { delay: 0.6, duration: 0.5 },
+              },
+            }}
+            className="font-medium text-white text-sm"
+          >
+            Get in-demand skills and experience
+          </MotionText>
+
+          <Button
+            onClick={() => router.push("/wait-list")}
+            className="bg-[#FCCE37] text-[#1A1A1A] flex text-base lg:w-[284px] gap-4"
+          >
+            Apply for the Next Cohort <ArrowRight />
+          </Button>
         </div>
+
+        {/* Right Side */}
+        <MotionSection
+          variants={{
+            hidden: { opacity: 0, scale: 0.95 },
+            show: {
+              opacity: 1,
+              scale: 1,
+              transition: { delay: 0.7, duration: 0.6 },
+            },
+          }}
+          className="bg-white rounded-2xl lg:w-[569px] p-2 lg:p-6 lg:-mr-8"
+        >
+          <div className="flex flex-col gap-[18px]">
+            {valueItems.map((text, i) => (
+              <MotionText
+                key={i}
+                variants={{
+                  hidden: { opacity: 0, x: -20 },
+                  show: {
+                    opacity: 1,
+                    x: 0,
+                    transition: { delay: 0.8 + i * 0.1 },
+                  },
+                }}
+                className="flex gap-3"
+              >
+                <Image
+                  src="/icons/check.svg"
+                  alt="check-icon"
+                  width={24}
+                  height={24}
+                />
+                <span className="text-base font-normal lg:w-[382px]">
+                  {text}
+                </span>
+              </MotionText>
+            ))}
+          </div>
+        </MotionSection>
       </MotionSection>
-    </MotionSection>
     </MotionSection>
   );
 };
