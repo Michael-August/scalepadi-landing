@@ -60,12 +60,12 @@ export default function HeroSection() {
               "Unlock Expert Strategies to Scale Smart",
               "Your Growth Starts Here Join the Waitlist",
             ]}
-            loop={true}
             cursor
-            cursorStyle="..."
-            typeSpeed={60}
-            deleteSpeed={40}
-            delaySpeed={3000}
+            cursorStyle="|"
+            typeSpeed={80}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            loop={true}
           />
         </motion.h1>
 
